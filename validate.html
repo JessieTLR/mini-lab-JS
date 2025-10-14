@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation de MDP</title>
+    <link rel="stylesheet" href="../Projets JS/Style/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="todo.html">To-Do List</a></li>
+             <li><a href="datecalc.html">Calculateur de dates</a></li>
+            <li><a href="password.html">Générateur de MDP</a></li>
+            <li><a href="validate.html">Validation MDP</a></li>
+        </ul>
+    </nav>
+    <header class="form">
+        <form action="">
+            <div class="pseudo-container">
+                <label for="pseudo"> Pseudo </label>
+                <input type="text" autocomplete="off" id="pseudo">
+                <span></span>
+            </div>
+
+            <div class="email-container">
+                <label for="email"> Email </label>
+                <input type="text" autocomplete="off" id="email">
+                <span> Email incorrect </span>
+            </div>
+
+            <div class="password-container">
+                <label for="password"> Mot de passe </label>
+                <input type="password" autocomplete="off" id="password">
+                <p id="progress-bar"></p>
+                <span></span>
+            </div>
+
+            <div class="confirm-container">
+                <label for="confirm"> Confirmer mot de passe </label>
+                <input type="password" autocomplete="off" id="confirm">
+                <span></span>
+            </div>
+
+            <input type="submit" value="VALIDER">
+        </form>
+    </header>
+
+    <script src="form.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@ nav {
   top: 0;
   z-index: 50;
   background: #fff;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
 
   ul {
     max-width: 1100px;
@@ -17,7 +17,9 @@ nav {
     gap: 18px;
     overflow-x: auto;
     scrollbar-width: none;
-    &::-webkit-scrollbar { display: none; }
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   li {
@@ -29,12 +31,12 @@ nav {
     padding: 10px 14px;
     text-decoration: none;
     font-weight: 600;
-    letter-spacing: .2px;
-    border-radius: 999px; 
+    letter-spacing: 0.2px;
+    border-radius: 999px;
     transition: $transition;
     color: $color-text;
+    position: relative;
 
-    // Soulignement progressif en dégradé
     &::after {
       content: "";
       position: absolute;
@@ -46,7 +48,7 @@ nav {
       background: linear-gradient(65deg, $color-primary, $color-secondary);
       transform: scaleX(0);
       transform-origin: left;
-      transition: transform .25s ease;
+      transition: transform 0.25s ease;
     }
 
     &:hover {
@@ -58,20 +60,21 @@ nav {
       }
     }
 
-    // État actif : pilule pleine en dégradé + texte blanc
+    // === État actif ===
     &.active {
       color: #fff;
       background: linear-gradient(65deg, $color-primary, $color-secondary);
       box-shadow: 0 6px 18px rgba(22, 217, 231, 0.18);
 
       &::after {
-        // on désactive l'underline, la pilule suffit
-        transform: scaleX(0);
+        transform: scaleX(1); // underline reste visible
+        bottom: 3px;
+        height: 3px;
+        background: #fff; // underline blanc pour contraste
       }
     }
   }
 }
-
 
 @media (max-width: 700px) {
   nav ul {
@@ -79,6 +82,7 @@ nav {
     gap: 10px;
     padding: 12px 12px;
   }
+
   nav a {
     padding: 9px 12px;
     font-weight: 600;
