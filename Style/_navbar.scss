@@ -1,0 +1,86 @@
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+
+  ul {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 18px;
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
+  }
+
+  li {
+    position: relative;
+  }
+
+  a {
+    display: inline-block;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .2px;
+    border-radius: 999px; 
+    transition: $transition;
+    color: $color-text;
+
+    // Soulignement progressif en dégradé
+    &::after {
+      content: "";
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 6px;
+      height: 3px;
+      border-radius: 2px;
+      background: linear-gradient(65deg, $color-primary, $color-secondary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .25s ease;
+    }
+
+    &:hover {
+      background: rgba(22, 217, 231, 0.06);
+      transform: translateY(-1px);
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    // État actif : pilule pleine en dégradé + texte blanc
+    &.active {
+      color: #fff;
+      background: linear-gradient(65deg, $color-primary, $color-secondary);
+      box-shadow: 0 6px 18px rgba(22, 217, 231, 0.18);
+
+      &::after {
+        // on désactive l'underline, la pilule suffit
+        transform: scaleX(0);
+      }
+    }
+  }
+}
+
+
+@media (max-width: 700px) {
+  nav ul {
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 12px 12px;
+  }
+  nav a {
+    padding: 9px 12px;
+    font-weight: 600;
+  }
+}

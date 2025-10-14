@@ -1,0 +1,23 @@
+$color-text: rgb(82, 82, 82);
+$color-bg: rgb(235, 244, 242);
+$color-primary: #16d9e7;
+$color-secondary: #5ef9a4;
+$color-error: red;
+$radius: 16px;
+$transition: 0.3s ease;
+
+
+* {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  color: $color-text;
+  list-style: none;
+
+    body {
+        min-height: 100vh;
+        background: $color-bg;
+    }
+}
