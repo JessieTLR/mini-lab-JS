@@ -19,6 +19,7 @@ nav {
   z-index: 50;
   background: #fff;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+  width: 100%;
 }
 nav ul {
   max-width: 1100px;
@@ -34,6 +35,30 @@ nav ul {
 }
 nav ul::-webkit-scrollbar {
   display: none;
+}
+@media (max-width: 700px) {
+  nav nav ul {
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 12px 12px;
+  }
+  nav nav a {
+    padding: 9px 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 500px) {
+  nav nav ul {
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 10px 10px;
+  }
+  nav nav a {
+    padding: 7px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
 }
 nav li {
   position: relative;
