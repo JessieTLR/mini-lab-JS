@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de dates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="todo.html">To-Do List</a></li>
+             <li><a href="datecalc.html">Calculateur de dates</a></li>
+            <li><a href="password.html">Générateur de MDP</a></li>
+            <li><a href="validate.html">Validation MDP</a></li>
+        </ul>
+    </nav>
+    <div class="datecalc">
+        <div class="card">
+            <h2>Book your holiday</h2>
+            <div><span id="nightPrice">46</span> € / night</div>
+
+            <label for="">Start</label>
+            <input id="start_date" type="date" required />
+            <label for="">End</label>
+            <input id="end_date" type="date" required />
+
+            <h3>Total : <span id="total"></span> €</h3>
+            <button class="btn btn cyan accent-3">Validate</button>
+        </div>
+    </div>
+    <script src="datecalc.js"></script>
+</body>
+</html>

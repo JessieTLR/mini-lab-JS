@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -244,6 +245,94 @@ header .about .skills img:hover {
   header .about .text p {
     font-size: 0.95rem;
   }
+}
+
+.todolist {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+  min-height: calc(100vh - 100px);
+}
+.todolist .toDo-container {
+  background: linear-gradient(to right, #16d9e7, #5ef9a4);
+  border-radius: 16px;
+  box-shadow: 0 4px 0.5em rgba(7, 7, 7, 0.26);
+  padding: 25px 20px;
+  width: 350px;
+  height: 400px;
+  text-align: center;
+  color: rgb(82, 82, 82);
+}
+.todolist .toDo-container h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 2px;
+  color: rgb(235, 244, 242);
+  margin-bottom: 40px;
+}
+.todolist .toDo-container .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todolist .toDo-container .form input {
+  background: rgb(235, 244, 242);
+  border: 2px solid #5ef9a4;
+  border-radius: 50px;
+  width: 220px;
+  height: 36px;
+  padding-left: 12px;
+  color: rgb(82, 82, 82);
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+.todolist .toDo-container .form input::-moz-placeholder {
+  color: #16d9e7;
+  font-weight: 600;
+}
+.todolist .toDo-container .form input::placeholder {
+  color: #16d9e7;
+  font-weight: 600;
+}
+.todolist .toDo-container .form input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(22, 217, 231, 0.4);
+}
+.todolist .toDo-container .form ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.todolist .toDo-container .form ul li {
+  color: #16d9e7;
+  font-size: 1rem;
+  text-align: left;
+  margin: 6px 0;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: relative;
+}
+.todolist .toDo-container .form ul li::before {
+  content: "✦   ";
+}
+.todolist .toDo-container .form ul li:hover::after {
+  content: "(terminé)";
+  opacity: 1;
+  padding: 3px;
+  color: rgb(8.6586826347, 232.3413173653, 109.6766467066);
+  font-style: italic;
+}
+.todolist .toDo-container .form ul li.checked::before {
+  content: "✓";
+  padding: 10px;
+  color: rgb(8.6586826347, 232.3413173653, 109.6766467066);
+}
+.todolist .toDo-container .form ul li.checked:hover::after {
+  content: "(supprimer)";
+  color: red;
+  opacity: 1;
 }
 
 form {
