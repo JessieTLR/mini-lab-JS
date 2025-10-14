@@ -335,6 +335,253 @@ header .about .skills img:hover {
   opacity: 1;
 }
 
+.datecalc {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 100px);
+  padding-top: 80px;
+  background: rgb(235, 244, 242);
+}
+.datecalc .card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px 50px;
+  width: 340px;
+  text-align: center;
+  position: relative;
+  transition: 0.3s ease;
+}
+.datecalc .card::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(65deg, #16d9e7, #5ef9a4);
+  opacity: 0.1;
+  top: -25px;
+  right: -25px;
+}
+.datecalc .card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  color: #16d9e7;
+}
+.datecalc .card div {
+  margin-bottom: 20px;
+  color: rgb(82, 82, 82);
+  font-weight: 500;
+}
+.datecalc .card div span#nightPrice {
+  color: #5ef9a4;
+  font-weight: 700;
+}
+.datecalc .card label {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgb(82, 82, 82);
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+.datecalc .card input[type=date] {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #16d9e7;
+  background: rgb(235, 244, 242);
+  color: rgb(82, 82, 82);
+  font-size: 1rem;
+  transition: 0.3s ease;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.datecalc .card input[type=date]:focus {
+  outline: none;
+  border-color: #5ef9a4;
+  box-shadow: 0 0 8px rgba(22, 217, 231, 0.4);
+}
+.datecalc .card h3 {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  color: #16d9e7;
+}
+.datecalc .card h3 span#total {
+  color: #5ef9a4;
+  font-weight: 700;
+}
+.datecalc .card .btn {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(65deg, #16d9e7, #5ef9a4);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+.datecalc .card .btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+@media (max-width: 700px) {
+  .datecalc .card {
+    padding: 30px 25px;
+    width: 90%;
+  }
+}
+
+.password-generator {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 100px);
+  padding-top: 80px;
+  background: rgb(235, 244, 242);
+}
+.password-generator .app {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px 50px;
+  width: 380px;
+  text-align: center;
+  position: relative;
+  transition: 0.3s ease;
+}
+.password-generator .app::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -30px;
+  right: -30px;
+  border-radius: 50%;
+  background: linear-gradient(65deg, #16d9e7, #5ef9a4);
+  opacity: 0.15;
+}
+.password-generator .app input[type=text]#password-output {
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 12px 10px;
+  border-radius: 999px;
+  border: 1px solid #16d9e7;
+  background: rgb(235, 244, 242);
+  color: rgb(82, 82, 82);
+  margin-bottom: 25px;
+  transition: 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+.password-generator .app input[type=text]#password-output:focus {
+  outline: none;
+  border-color: #5ef9a4;
+  box-shadow: 0 0 8px rgba(22, 217, 231, 0.4);
+}
+.password-generator .app .range-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.password-generator .app .range-container input[type=range] {
+  width: 70%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 6px;
+  border-radius: 10px;
+  background: linear-gradient(65deg, #16d9e7, #5ef9a4);
+  outline: none;
+  cursor: pointer;
+}
+.password-generator .app .range-container input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgb(235, 244, 242);
+  border: 2px solid #16d9e7;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.password-generator .app .range-container input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  background: #5ef9a4;
+}
+.password-generator .app .range-container input#display-password-length {
+  width: 40px;
+  text-align: center;
+  border: none;
+  font-weight: 600;
+  color: #16d9e7;
+  background: transparent;
+}
+.password-generator .app .checkbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 10px;
+  margin-bottom: 25px;
+}
+.password-generator .app .checkbox-container input[type=checkbox] {
+  accent-color: #5ef9a4;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.password-generator .app .checkbox-container label {
+  font-size: 0.95rem;
+  color: rgb(82, 82, 82);
+  cursor: pointer;
+}
+.password-generator .app #generateButton {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: linear-gradient(65deg, #16d9e7, #5ef9a4);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.password-generator .app #generateButton:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+.password-generator .app #generateButton:active {
+  transform: scale(0.97);
+}
+.password-generator .app {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 700px) {
+  .password-generator .app {
+    padding: 30px 25px;
+    width: 90%;
+  }
+}
+
 form {
   width: 50%;
   min-width: 380px;

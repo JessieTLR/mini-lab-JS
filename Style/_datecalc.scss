@@ -1,0 +1,116 @@
+// === CALCULATEUR DE DATES ===
+.datecalc {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 100px);
+  padding-top: 80px;
+  background: $color-bg;
+
+  .card {
+    background: #fff;
+    border-radius: $radius;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px 50px;
+    width: 340px;
+    text-align: center;
+    position: relative;
+    transition: $transition;
+
+    // décoratif
+    &::after {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(65deg, $color-primary, $color-secondary);
+      opacity: 0.1;
+      top: -25px;
+      right: -25px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      color: $color-primary;
+    }
+
+    div {
+      margin-bottom: 20px;
+      color: $color-text;
+      font-weight: 500;
+
+      span#nightPrice {
+        color: $color-secondary;
+        font-weight: 700;
+      }
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $color-text;
+      letter-spacing: 0.5px;
+      text-align: left;
+    }
+
+    input[type="date"] {
+      width: 100%;
+      margin-top: 6px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid $color-primary;
+      background: $color-bg;
+      color: $color-text;
+      font-size: 1rem;
+      transition: $transition;
+      appearance: none;
+
+      &:focus {
+        outline: none;
+        border-color: $color-secondary;
+        box-shadow: 0 0 8px rgba(22, 217, 231, 0.4);
+      }
+    }
+
+    h3 {
+      margin-top: 25px;
+      font-size: 1.2rem;
+      color: $color-primary;
+      span#total {
+        color: $color-secondary;
+        font-weight: 700;
+      }
+    }
+
+    .btn {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 10px 22px;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(65deg, $color-primary, $color-secondary);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: $transition;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+
+      &:hover {
+        filter: brightness(1.08);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    .card {
+      padding: 30px 25px;
+      width: 90%;
+    }
+  }
+}
